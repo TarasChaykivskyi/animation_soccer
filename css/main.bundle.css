@@ -1,0 +1,570 @@
+@keyframes logo {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes goal {
+  0% {
+    transform: scale(1);
+    top: 48%;
+  }
+  19% {
+    transform: scale(4.2);
+    top: 44%;
+  }
+  46% {
+    transform: scale(3);
+    top: 41%;
+  }
+  73% {
+    transform: scale(4.2);
+    top: 44%;
+  }
+  99% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+    transform: scale(3);
+    top: 41%;
+  }
+}
+@keyframes scene2 {
+  0% {
+    height: auto;
+    visibility: visible;
+  }
+  100% {
+    height: auto;
+    visibility: visible;
+  }
+}
+@keyframes goal2 {
+  0% {
+    top: 0;
+    visibility: visible;
+    transform: scale(3);
+  }
+  20% {
+    top: -28.5%;
+    transform: scale(1.8);
+  }
+  80% {
+    top: -28.5%;
+  }
+  99% {
+    visibility: visible;
+  }
+  100% {
+    top: -100%;
+    transform: scale(1.8);
+    visibility: hidden;
+  }
+}
+@keyframes team-image {
+  0% {
+    transform: translateX(-100%);
+    visibility: visible;
+  }
+  20% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(0);
+  }
+  99% {
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(-100%);
+    visibility: hidden;
+  }
+}
+@keyframes team-player {
+  0% {
+    transform: translateX(100%);
+    visibility: visible;
+  }
+  20% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(0);
+  }
+  99% {
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(100%);
+    visibility: hidden;
+  }
+}
+@keyframes scene3 {
+  0% {
+    height: auto;
+    visibility: visible;
+  }
+  100% {
+    height: auto;
+    visibility: visible;
+  }
+}
+@keyframes scene3-team-image1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  10% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes scene3-team-image2 {
+  0% {
+    transform: translateX(100%);
+  }
+  10% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes team-score {
+  0% {
+    transform: translateY(-100%);
+    visibility: visible;
+  }
+  10% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+@keyframes players-list {
+  0% {
+    transform: translateY(200%);
+    visibility: visible;
+    height: auto;
+  }
+  20% {
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+  }
+  99% {
+    height: auto;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+    visibility: hidden;
+    height: 0;
+  }
+}
+@keyframes game-odds {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+@keyframes game-odds-list {
+  0% {
+    transform: rotateY(90deg);
+  }
+  10% {
+    transform: rotateY(-90deg);
+  }
+  20% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(0);
+  }
+}
+@keyframes finalBg1 {
+  0% {
+    transform: translateX(-37%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+@keyframes finalBg2 {
+  0% {
+    transform: translateX(-137%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes finalBg3 {
+  0% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #ffffff;
+  font-family: "Tipico-Medium", sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background: #C8102E;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.logo {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  animation: logo 1s ease-out;
+}
+@media screen and (max-width: 1599px) {
+  .logo {
+    width: 50px;
+  }
+}
+
+.container-absolute-center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+}
+
+.flex-align-center {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.hexagon {
+  width: 290px;
+  height: 175px;
+  background: #ffffff;
+  position: relative;
+}
+@media screen and (max-width: 1599px) {
+  .hexagon {
+    width: 145px;
+    height: 87.5px;
+  }
+}
+.hexagon:before {
+  content: "";
+  position: absolute;
+  top: -82px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 145px solid transparent;
+  border-right: 145px solid transparent;
+  border-bottom: 84px solid #ffffff;
+}
+@media screen and (max-width: 1599px) {
+  .hexagon:before {
+    top: -41px;
+    border-left: 72.5px solid transparent;
+    border-right: 72.5px solid transparent;
+    border-bottom: 42px solid #ffffff;
+  }
+}
+.hexagon:after {
+  content: "";
+  position: absolute;
+  bottom: -82px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 145px solid transparent;
+  border-right: 145px solid transparent;
+  border-top: 84px solid #ffffff;
+}
+@media screen and (max-width: 1599px) {
+  .hexagon:after {
+    bottom: -41px;
+    border-left: 72.5px solid transparent;
+    border-right: 72.5px solid transparent;
+    border-top: 42px solid #ffffff;
+  }
+}
+
+.goal {
+  position: absolute;
+  top: 48%;
+  font-size: 100px;
+  color: #ffffff;
+  font-family: Tipico-Medium;
+}
+@media screen and (max-width: 1599px) {
+  .goal {
+    font-size: 50px;
+  }
+}
+
+.scene1 .goal {
+  visibility: visible;
+  animation: goal 5s forwards;
+}
+
+.scene2 {
+  width: 100%;
+  height: 0;
+  visibility: hidden;
+  animation: scene2 3s 5s;
+}
+.scene2 .goal {
+  visibility: hidden;
+  position: relative;
+  top: -28.5%;
+  transform: scale(3);
+  animation: goal2 3s 5s forwards;
+}
+.scene2 .team-image {
+  width: 38%;
+  text-align: right;
+  transform: translateX(-100%);
+  visibility: hidden;
+  animation: team-image 3s 5s forwards;
+  position: relative;
+  top: 82px;
+  padding-right: 3.5%;
+}
+@media screen and (max-width: 1599px) {
+  .scene2 .team-image img {
+    width: 200px;
+  }
+}
+.scene2 .team-player {
+  width: 60%;
+  transform: translateX(100%);
+  visibility: hidden;
+  animation: team-player 3s 5s forwards;
+  position: relative;
+  top: 90px;
+}
+.scene2 .team-player span {
+  display: block;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 100px;
+}
+.scene2 .team-player span:last-child {
+  font-family: "Tipico-Regular";
+  font-size: 140px;
+  position: relative;
+  top: -10px;
+}
+@media screen and (max-width: 1599px) {
+  .scene2 .team-player span {
+    font-size: 50px;
+  }
+  .scene2 .team-player span:last-child {
+    font-size: 70px;
+  }
+}
+
+.scene3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0;
+  visibility: hidden;
+  animation: scene3 8s 8s forwards;
+}
+.scene3 .scene3-top {
+  justify-content: space-between;
+  padding-top: 7.7%;
+}
+.scene3 .scene3-top .team-image {
+  padding: 0 3%;
+  position: relative;
+  top: 10px;
+}
+@media screen and (max-width: 1599px) {
+  .scene3 .scene3-top .team-image img {
+    width: 200px;
+  }
+}
+.scene3 .scene3-top .team-image.team-image-1 {
+  transform: translateX(-100%);
+  animation: scene3-team-image1 8s 8s forwards;
+}
+.scene3 .scene3-top .team-image.team-image-2 {
+  transform: translateX(100%);
+  animation: scene3-team-image2 8s 8s forwards;
+}
+.scene3 .scene3-top .team-score {
+  height: 100%;
+  text-align: center;
+  color: #ffffff;
+  transform: translatey(-100%);
+  visibility: hidden;
+  animation: team-score 8s 8s forwards;
+  position: relative;
+  top: -30px;
+}
+.scene3 .scene3-top .team-score span {
+  font-size: 70px;
+  position: relative;
+  left: -12px;
+  top: -3px;
+}
+@media screen and (max-width: 1599px) {
+  .scene3 .scene3-top .team-score span {
+    font-size: 35px;
+    top: 0;
+  }
+}
+.scene3 .scene3-top .team-score h1 {
+  font-size: 250px;
+}
+@media screen and (max-width: 1599px) {
+  .scene3 .scene3-top .team-score h1 {
+    font-size: 125px;
+  }
+}
+.scene3 .scene3-bottom {
+  width: 100%;
+}
+.scene3 .scene3-bottom .players-list {
+  display: flex;
+  justify-content: center;
+  transform: translatey(200%);
+  opacity: 1;
+  height: 0;
+  visibility: hidden;
+  padding: 2% 0 0;
+  position: relative;
+  top: 23px;
+  animation: players-list 4s 8s;
+}
+.scene3 .scene3-bottom .players-list ul {
+  list-style: none;
+  color: #ffffff;
+  width: 50%;
+}
+.scene3 .scene3-bottom .players-list ul:first-child {
+  text-align: right;
+}
+.scene3 .scene3-bottom .players-list ul li {
+  font-size: 60px;
+  padding: 5px 7%;
+  white-space: nowrap;
+  font-family: "Tipico-Regular";
+}
+@media screen and (max-width: 1599px) {
+  .scene3 .scene3-bottom .players-list ul li {
+    font-size: 30px;
+  }
+}
+.scene3 .scene3-bottom .game-odds {
+  visibility: hidden;
+  animation: game-odds 4s 12s forwards;
+  position: relative;
+  top: -38px;
+}
+.scene3 .scene3-bottom .game-odds .container-hexagon {
+  justify-content: center;
+  list-style: none;
+}
+.scene3 .scene3-bottom .game-odds .container-hexagon li {
+  margin: 84px 1.8%;
+  text-align: center;
+  color: #C8102E;
+  transform: rotateY(90deg);
+  animation: game-odds-list 4s 12s forwards;
+}
+.scene3 .scene3-bottom .game-odds .container-hexagon li span {
+  position: relative;
+  top: -43px;
+  font-size: 36px;
+}
+@media screen and (max-width: 1599px) {
+  .scene3 .scene3-bottom .game-odds .container-hexagon li span {
+    font-size: 18px;
+    top: -20px;
+  }
+}
+.scene3 .scene3-bottom .game-odds .container-hexagon li h3 {
+  font-size: 84px;
+  position: relative;
+  top: -14px;
+}
+@media screen and (max-width: 1599px) {
+  .scene3 .scene3-bottom .game-odds .container-hexagon li h3 {
+    font-size: 42px;
+    top: -5px;
+  }
+}
+.scene3 .scene3-bottom .game-odds > span {
+  display: block;
+  font-size: 42px;
+  font-family: "Tipico-Regular";
+  text-align: center;
+  margin-top: 25px;
+}
+@media screen and (max-width: 1599px) {
+  .scene3 .scene3-bottom .game-odds > span {
+    font-size: 21px;
+    margin-top: 0;
+  }
+}
+
+.scene4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  background: #C8102E;
+}
+.scene4 div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.scene4 .finalBg1 {
+  background: red;
+  transform: translateX(50%);
+}
+.scene4 .finalBg2 {
+  transform: translateX(-200%);
+}
+.scene4 .finalBg3 {
+  transform: translateX(-300%);
+  visibility: hidden;
+}
